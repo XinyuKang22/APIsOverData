@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hasura
+  labels:
+    app: hasura
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hasura
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: hasura
+    spec:
+      containers:
+        - name: hasura
+          image: hasura/graphql-engine
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          # TO BE COMPLETED: Add a liveness probe for hasura here.
+          env:
+            - name: HASURA_GRAPHQL_DATABASE_URL
+              value: 'postgres://postgres:supersecret@hasura-postgres-service:5432/postgres'
+            - name: HASURA_GRAPHQL_ENABLE_CONSOLE
+              value: 'true'
+            # TO BE COMPLETED: turn on query logging
+      initContainers:
+        - name: liquibase
+          image: hasura-liquibase-migrations
+          env:
+            - name: URL
+              value: 'jdbc:postgresql://hasura-postgres-service:5432/postgres'
+            - name: USERNAME
+              value: postgres
+            - name: PASSWORD
+              value: supersecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hasura-admin-service
+spec:
+  selector:
+    app: hasura
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
