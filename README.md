@@ -58,7 +58,7 @@ For each of the pieces you've deployed so far, let's confirm whether we can chec
 
 Check the [Hasura API specifications](https://hasura.io/docs/latest/graphql/core/api-reference/index.html) to see if there is a simple endpoint that you can hit with `curl`, `httpie` or Postman. 
 
-Once you've found that endpoint, check that it is showing Hasura as ok:
+Once you've found that endpoint, check that it indicates that Hasura is operational:
 
 ```
 http http://localhost:8080/[???] -v
@@ -68,7 +68,7 @@ http http://localhost:8080/[???] -v
 
 Postgres doesn't offer a simple HTTP endpoint that would allow us to check it is ready to process requests. Instead, we need to execute a query against the database itself.
 
-The cli tool for doing this is `psql`. Assuming that you have it installed, craft a minimal query to check that the database is working:
+The cli tool for doing this is `psql`. Assuming that you have it installed, craft a minimal query to check that postgresql is working:
 
 ```
 psql -U postgres -h localhost -c "[???]"
