@@ -1,4 +1,10 @@
 
+# Pre-requisities
+
+1. [docker](https://docs.docker.com/get-docker/)
+2. A kubernetes cluster. You can use the one built into docker.
+3. [tilt](https://docs.tilt.dev/install.html)
+4. A tool to make http requests like [httpie](https://httpie.io/), curl or [Postman](https://www.postman.com/downloads/).
 
 # Getting Started
 
@@ -16,7 +22,7 @@ TODO insert diagram here.
 
 Keep in mind that many official (and unofficial images) contain both the containerised application as well as the tools necessary to work with it.
 
-## Start tile
+## Start tilt
 
 From the directory containing this README, run `tilt up` to start tilt. Press `space` to get tilt to open the browser console.
 
