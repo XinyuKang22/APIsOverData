@@ -150,19 +150,19 @@ Test your changes by re-running your query and verifying that you can see the st
 # Recap
 
 At this point you should be able to:
-1. Vheck container logs.
+1. Check container logs.
 2. Watch events in kubernetes as tilt applies your changes.
-3. Check that hasura and postgres are working.
-4. Configure hasura to track tables.
+3. Check that Hasura and postgres are working.
+4. Configure Hasura to track tables.
 5. Insert data into those tables.
 6. Query those tables using Postman, `http` or `curl`.
-7. Verify that the database query executed by hasura is sane.
+7. Verify that the database query executed by Hasura is sensible.
 
 If you can't do these things yet, stop and make sure that you can before moving on.
 
 # Modifying your schema
 
-Now that you are able to send queries to hasura and have a fair chance of diagnosing issues.
+Now that you are able to send queries to Hasura and have a fair chance of diagnosing issues.
 
 ## Edit your schema
 
@@ -178,7 +178,7 @@ If you take a couple of tries to write the changeset, you might notice that liqu
 
 ## Figure out how the migration is applied
 
-The liquibase base image is different to the postgres and hasura ones. Check the container definitions in `k8s/postgres.yaml` and `k8s/hasura.yaml`. Notice that the image names for hasura-postgres and hasura are using official images. If you wanted, you could find these images on docker hub.
+The liquibase base image is different to the postgres and Hasura ones. Check the container definitions in `k8s/postgres.yaml` and `k8s/hasura.yaml`. Notice that the image names for hasura-postgres and hasura are using official images. If you wanted, you could find these images on docker hub.
 
 The image for the hasura init container is different, it is using an image that is built by Tilt. This means that whenever the inputs to the image changes, tilt will build the image, push it into the kubernetes cluster's image repository and then reload the container.
 
