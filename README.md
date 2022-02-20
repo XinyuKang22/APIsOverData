@@ -74,9 +74,9 @@ The cli tool for doing this is `psql`. Assuming that you have it installed, craf
 psql -U postgres -h localhost -c "[???]"
 ```
 
-Now, let's check that liquibase has applied the changeset that we expect. Open `hasura/liquibase/changelog/dbchangelog.xml` and determine what tables you expect to have been created.
+Now, let's check that liquibase has applied the change set that we expect. Open `hasura/liquibase/changelog/dbchangelog.xml` and determine what tables you expect to have been created.
 
-Use `psql` to query the tables that exist in the database and check that match what is specified in the change log.
+Use `psql` to query the tables that exist in the database and check that match what is specified in the change set.
 
 1. Where else might `psql` be installed and available?
 2. If you didn't want to install `psql` in your local environment, how else could you run it?
@@ -125,12 +125,13 @@ query MyQuery {
 6. Validate that you can see the data that you just inserted.
 7. Use `psql` to check what data has been inserted into the `film` table.
 
-Now, let's validate that you can call the graphql endpoint from the outside. Use postman (or your favourite tool) to query an endpoint. You will need to know the URL of the endpoint (hint: you can see this in the "API" explorer of the Hasura console), the HTTP method to use (hint: also visible in the "API" explorer) and how to encapsulate graphql in HTTP.
+Now, let's validate that you can call the graphql endpoint from the outside. Use Postman (or your favourite tool) to query an endpoint. You will need to know the URL of the endpoint (hint: you can see this in the "API" explorer of the Hasura console), the HTTP method to use (hint: also visible in the "API" explorer) and how to encapsulate graphql in HTTP.
 
 1. What error message do you get if you use the *wrong* HTTP method?
 2. What happens if you request a field that doesn't have a corresponding column in the database?
 3. Where can you find the error message from the container for these bad requests?
 4. For well-formatted requests, can you see any messages? 
+5. Is there a Hasura API that you can query to see which tables have been tracked.
 
 ## More logging
 
@@ -155,4 +156,46 @@ If you can't do these things yet, stop and make sure that you can before moving 
 
 # Modifying your schema
 
-TBD
+Now that you are able to send queries to hasura and have a fair chance of diagnosing issues.
+
+## Edit your schema
+
+Find the file that holds the database change sets. Read through the [documentation for change sets](https://docs.liquibase.com/concepts/changelogs/xml-format.html) and check that you understand the details of the change set that already exists.
+
+Once you understand the concepts, let's start by adding a new column to an existing table; a 'middle name' for our actors. Create a new change set (make sure it has a new id) and work out how to craft the XML to alter a table and add a new column. For simplicity, make it nullable for now.
+
+Once you've added the XML, save your work and watch tilt apply your changes.
+
+If you take a couple of tries to write the changeset, you might notice that liquibase stops being able to apply it. Liquibase won't re-apply a changeset it has already applied - even if the content changes. This encourages immutable changesets, but can be annoying when writing a changeset. For now, you can delete the `hasura-postgres` pod to reset your database. Don't worry, we will fix this shortly.
+
+1. How would you manage a change that introduced a new column that was not nullable?
+
+## Figure out how the migration is applied
+
+The liquibase base image is different to the postgres and hasura ones. Check the container definitions in `k8s/postgres.yaml` and `k8s/hasura.yaml`. Notice that the image names for hasura-postgres and hasura are using official images. If you wanted, you could find these images on docker hub.
+
+The image for the hasura init container is different, it is using an image that is built by tilt. This means that whenever the inputs to the image changes, tilt will build the image, push it into the kubernetes cluster's image repository and then reload the container.
+
+1. Find the part of the `Tiltfile` that defines how the image is built.
+2. Check the log messages that describe the image being rebuilt and the container restarting when the changeset is added.
+3. What happens if you break the changeset?
+4. What happens if the init container doesn't start cleanly?
+
+## Test the changes
+
+Update the query that you have been using to now return the newly added field. Test it out, and validate that the response includes the new fields.
+
+## Contrast with a RESTful approach
+
+1. How would this process have been different if you were following a RESTful approach?
+2. Or if you were implementing the API yourself?
+
+# Handling updates
+
+# Testing your API
+
+# Integration with a front end
+
+# Authentication and Authorisation
+
+# Asynchronous processes
