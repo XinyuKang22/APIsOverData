@@ -1,9 +1,9 @@
 
 # Pre-requisities
 
-1. [docker](https://docs.docker.com/get-docker/)
+1. [Docker](https://docs.docker.com/get-docker/)
 2. A kubernetes cluster. You can use the one built into docker.
-3. [tilt](https://docs.tilt.dev/install.html)
+3. [Tilt](https://docs.tilt.dev/install.html)
 4. A tool to make http requests like [httpie](https://httpie.io/), curl or [Postman](https://www.postman.com/downloads/).
 
 # Getting Started
@@ -12,9 +12,9 @@
 
 The different pieces of the stack are brought together in the `Tiltfile`.
 
-Look in that tilt file and find the three major pieces:
+Look in that Tiltfile and find the three major pieces:
 
-1. The hasura graphql engine.
+1. The Hasura graphql engine.
 2. The postgresql database.
 3. The migrations that create our model inside the database.
 
@@ -24,7 +24,11 @@ Keep in mind that many official (and unofficial images) contain both the contain
 
 ## Start tilt
 
-From the directory containing this README, run `tilt up` to start tilt. Press `space` to get tilt to open the browser console.
+From the directory containing this README, run `tilt up` to start Tilt. Press `space` to get tilt to open the browser console. If everything is working, you can expect to see that three resources have been successfully processed:
+
+1. The Tiltfile itself.
+2. hasura (including the graphql engine and migrations).
+3. hasura-postgres (the postgresql database).
 
 ## Check that sane things are happening in kubernetes
 
@@ -34,16 +38,18 @@ From the directory containing this README, run `tilt up` to start tilt. Press `s
 kubectl get events --all-namespaces --watch
 ```
 
-then refresh one of the components in your tiltfile. Refresh the `hasura` component and look at the events that are reported.
+then refresh one of the components in your Tiltfile.
+
+Refresh the `hasura` component and look at the events that are reported.
 
 1. Can you see when the new pod is created? What `kubectl` command can you use to get information about that pod?
 2. Can you tell when the liquibase migrations have been applied?
 
 ## Expose it to your local environment
 
-Tilt offers a simple way to expose ports into your local environment. Read through the [relevant documentation](https://docs.tilt.dev/accessing_resource_endpoints.html), then add the relevant lines to your Tilefile to expose both Hasura and Postgres to your local environment.
+Tilt offers a simple way to expose ports into your local environment. Read through the [relevant documentation](https://docs.tilt.dev/accessing_resource_endpoints.html), then add the relevant lines to your Tiltfile to expose both Hasura and Postgres to your local environment.
 
-1. What do you see in the tilt console after the ports are opened?
+1. What do you see in the Tilt console after the ports are opened?
 2. What other tool can you use to see if the relevant ports have been opened in your local environment? 
 
 Sanity check that the ports are open before moving on.
@@ -74,7 +80,7 @@ The cli tool for doing this is `psql`. Assuming that you have it installed, craf
 psql -U postgres -h localhost -c "[???]"
 ```
 
-Now, let's check that liquibase has applied the change set that we expect. Open `hasura/liquibase/changelog/dbchangelog.xml` and determine what tables you expect to have been created.
+Now, let's check that Liquibase has applied the change set that we expect. Open `hasura/liquibase/changelog/dbchangelog.xml` and determine what tables you expect to have been created.
 
 Use `psql` to query the tables that exist in the database and check that match what is specified in the change set.
 
@@ -99,12 +105,12 @@ Pick the 'type' of liveness probe that you will need to use (http, exec, etc) th
 
 Same as above.
 
-1. What does the health end point of hasura report when postgres is down?
-2. Is it a good idea for transitive failures (e.g. hasura not having access to a working postgres) to restart the container? To direct traffic away from it?
+1. What does the health end point of hasura report when hasura-postgres is down?
+2. Is it a good idea for transitive failures (e.g. Hasura not having access to a working database) to restart the container? To direct traffic away from it?
 
 ## Checkpoint - is everything working
 
-Open the hasura console (you should be able to click on the link in the tilt console) and check that you can map tables.
+Open the Hasura console (you should be able to click on the link in the tilt console) and check that you can map tables.
 
 From the console:
 
@@ -174,7 +180,7 @@ If you take a couple of tries to write the changeset, you might notice that liqu
 
 The liquibase base image is different to the postgres and hasura ones. Check the container definitions in `k8s/postgres.yaml` and `k8s/hasura.yaml`. Notice that the image names for hasura-postgres and hasura are using official images. If you wanted, you could find these images on docker hub.
 
-The image for the hasura init container is different, it is using an image that is built by tilt. This means that whenever the inputs to the image changes, tilt will build the image, push it into the kubernetes cluster's image repository and then reload the container.
+The image for the hasura init container is different, it is using an image that is built by Tilt. This means that whenever the inputs to the image changes, tilt will build the image, push it into the kubernetes cluster's image repository and then reload the container.
 
 1. Find the part of the `Tiltfile` that defines how the image is built.
 2. Check the log messages that describe the image being rebuilt and the container restarting when the changeset is added.
