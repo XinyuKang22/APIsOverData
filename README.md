@@ -4,7 +4,7 @@
 1. [Docker](https://docs.docker.com/get-docker/)
 2. A kubernetes cluster. You can use the one built into docker.
 3. [Tilt](https://docs.tilt.dev/install.html)
-4. A tool to make http requests like [httpie](https://httpie.io/), curl or [Postman](https://www.postman.com/downloads/).
+4. A tool to make http requests like [httpie](https://httpie.io/), curl, [Postman](https://www.postman.com/downloads/) or [Insomnia](https://insomnia.rest/).
 
 # Getting Started
 
@@ -20,7 +20,7 @@ Look in that Tiltfile and find the three major pieces:
 
 TODO insert diagram here.
 
-Keep in mind that many official (and unofficial images) contain both the containerised application as well as the tools necessary to work with it.
+Keep in mind that many official (and unofficial) images contain both the containerised application as well as the tools necessary to work with it.
 
 ## Start tilt
 
