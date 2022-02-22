@@ -228,7 +228,7 @@ Then, apply what you learned from reading the documentation to make the query va
 
 Up until now, we haven't really been using the 'graph' part of GraphQL. We have only been retrieving actors. In this step, we will change that.
 
-Before we can start retrieving data by leveraging the relationships between our entities, we need to configure Hasura what those relationships are.
+Before we can start retrieving data by leveraging the relationships between our entities, we need to tell Hasura what those relationships are.
 
 1. Click the "Data" tab in the Hasura console.
 2. Click "actor" under "public" under "default" on the left hand side.
@@ -243,8 +243,9 @@ Notice that one GraphQL query is now retrieving information from multiple tables
 
 1. What information did Hasura use to auto-detect the relationship between an actor and a role?
 2. Why is there no relationship between the Role and Film detected?
+3. Why do you think there is both `roles` and `roles_aggregate`? When do you think you would use each one?
 
-Add another changeset to create the necessary information to link a Role and Film. Then go through the tables in the Hasura console and add all the auto-detected relationships. If you are adding another column to an existing table, it may be simpler to reset your data at this point.
+Add another changeset to create the information necessary for Hasura to detect a relationship between a Role and a Film. Then go through the tables in the Hasura console and add all the auto-detected relationships. If you are adding another column to an existing table, it may be simpler to reset your data at this point.
 
 Now, use the "API Explorer" to create a query that traverses our whole graph: actor -> role -> film.
 
