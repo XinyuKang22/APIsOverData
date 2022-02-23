@@ -1,0 +1,57 @@
+@startuml C4_Elements
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+Component(tilt, "tilt", "tilt", "Process started by `tilt up`")
+
+System_Boundary(tiltfile, "Tiltfile") {
+    Component(liquibasedef, "Image Resource", "tilt", "Defines when to rebuild the liquibase image")
+    Component(hasuradef, "Hasura Resource", "tilt", "Defines how to deploy the hasura resource")
+    Component(postgresdef, "Hasura Postgres Resource", "tilt", "Defines how to deploy postgres")
+}
+
+
+Component(liquibaseimagedef, "Liquibase Dockerfile", "docker", "Defines how to build the image")
+
+Component(hasuradep, "Hasura Deployment", "k8s", "Defines how to deploy the Hasura Containers")
+Component(postgresdep, "Postgres Deployment", "k8s", "Defines how to deploy the postgres Container")
+
+Component(liquibaseimage, "Liquibase Image", "docker", "Contains liquibase and changesets")
+
+Component(docker, "Docker", "docker", "Builds images from Dockerfiles")
+
+System_Boundary(k8s, "Kubernetes Cluster") {
+    Component(kubeapi, "Kubernetes Controller", "k8s", "Manages cluster")
+    Component(hasuracon, "Hasura Container", "Hasura", "The GraphQL Engine")
+    Component(liquibasecon, "Liquibase Init Container", "Liquibase", "Applies changesets to database")
+    Component(postgrescon, "Postgres Container", "Postgres", "The database")
+}
+
+Rel(tilt, tiltfile, "Looks for changes in")
+
+Rel(hasuracon, postgrescon, "Calls", "JDBC")
+Rel(liquibasecon, postgrescon, "Applies changesets", "JDBC")
+Rel(liquibasecon, hasuracon, "Runs before")
+Rel(liquibasecon, liquibaseimage, "Runs")
+
+Rel(postgresdef, postgresdep, "Connects")
+Rel(postgresdep, postgrescon, "Causes creation of")
+
+Rel(hasuradef, hasuradep, "Connects")
+Rel(hasuradep, hasuracon, "Causes creation of")
+Rel(hasuradep, liquibasecon, "Causes creation of")
+
+Rel(liquibasedef, liquibaseimagedef, "Connects")
+Rel(docker, liquibaseimagedef, "Reads")
+Rel(docker, liquibaseimage, "Creates")
+Rel(liquibaseimagedef, liquibaseimage, "Contains build instructions for")
+
+Rel(tilt, docker, "Orchestrates to build images")
+Rel(tilt, kubeapi, "Orchestrates to synchronise deployments")
+Rel(kubeapi, liquibasecon, "Creates")
+Rel(kubeapi, hasuracon, "Creates")
+Rel(kubeapi, postgrescon, "Creates")
+
+Rel(kubeapi, hasuradep, "Reads")
+Rel(kubeapi, postgresdep, "Reads")
+
+@enduml

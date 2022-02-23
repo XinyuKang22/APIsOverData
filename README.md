@@ -18,7 +18,7 @@ Look in that Tiltfile and find the three major pieces:
 2. The postgresql database.
 3. The migrations that create our model inside the database.
 
-TODO insert diagram here.
+![](./.generated-diagrams/runtime.svg)
 
 Keep in mind that many official (and unofficial) images contain both the containerised application as well as the tools necessary to work with it.
 
@@ -312,15 +312,20 @@ CREATE OR REPLACE TRIGGER trigger_on_updated_trigger
 
 Liquibase has support for managing functions and triggers *if* you have a pro licence. We don't, so we will have to drop down to [using raw sql instead](https://docs.liquibase.com/change-types/sql-file.html).
 
-Create a new .sql file as a peer to the changelog to contain your completed function and a trigger that will make sure that it is called when a row is UPDATED, then wire it into a new changeset.
+Create a new .sql file as a peer to `dbchangelog.xml` to contain your completed function and a trigger that will make sure that it is called when a row is UPDATED, then wire it into a new changeset.
 
 Once tilt has rebuilt the pod and the initcontainer has applied your migrations, use either `psql` to check that the trigger has been added or use the "Data" section of the Hasura console.
 
 Finally, use a mutation to update an actor and verify that the `updated_at` and `version` do indeed change.
 
 1. Try updating a row in the database using SQL via the `psql` tool. Do `updated_at` and `version` change? Why or why not?
-2. `updated_at`, `version` and `created_at` can still be set (to no effect) by the caller. Can we hide this during mutations but show it during queries?
-3. Try creating a new function directly in the database, but type the column name on `new` incorrectly. When do you find out that it is incorrect? Can this be improved? 
+2. `updated_at` and `version` can still be set (to no effect) by the caller. Can we hide this during mutations (so that the caller is never wondering if they need to set them) but still show it during queries?
+3. `created_at` can be set by the caller. What could we do to prevent that?
+4. Try creating a new function directly in the database, but type the column name on `new` incorrectly. When do you find out that it is incorrect? Can this be improved? 
+
+## Searching
+
+One thing that we often do is introduce a secondary data store that is optimised for performing searches. Although a sensible default approach, for the sake of this exercise we will see how far we can push [postgres's searching capabilities](https://www.postgresql.org/docs/current/textsearch-intro.html).
 
 # Testing your API
 
