@@ -18,7 +18,7 @@
 
 [Leveraging Database Features](sections/050_leverage_database.md)
 
-# Testing your API
+# Automated tests for your API
 
 # Integration with a front end
 
