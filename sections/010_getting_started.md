@@ -92,7 +92,7 @@ To make sure that Hasura is in a fit state to accept requests all the time, let'
 Pick the 'type' of liveness probe that you will need to use (http, exec, etc) then add it to the container definition for hasura.
 
 1. How can you validate that the probe is behaving correctly?
-2. What happens if you mistype the probe?
+2. What happens if you mistype the path in the probe, but the probe is still syntactically correct?
 
 ### Postgres
 
@@ -128,8 +128,8 @@ Now, let's validate that you can call the graphql endpoint from the outside. Use
 
 1. What error message do you get if you use the *wrong* HTTP method?
 2. What happens if you request a field that doesn't have a corresponding column in the database?
-3. Where can you find the error message from the container for these bad requests?
-4. For well-formatted requests, can you see any messages? 
+3. Where can you find the error message in the container for these bad requests?
+4. For well-formatted requests, can you see any messages in the container? 
 5. Is there a Hasura API that you can query to see which tables have been tracked.
 6. What is name of the "MyQuery" part of the query? What is it useful for?
 
