@@ -9,9 +9,13 @@
 # Sections
 
 [Getting Started](sections/010_getting_started.md)
+
 [Extending the Model](sections/020_modifying_schema.md)
+
 [More Queries](sections/030_more_queries.md)
+
 [Handling Updates](sections/040_handling_updates.md)
+
 [Leveraging Database Features](sections/050_leverage_database.md)
 
 # Testing your API
