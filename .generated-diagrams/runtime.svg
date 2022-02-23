@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1122px" preserveAspectRatio="none" style="width:1474px;height:1122px;background:#FFFFFF;" version="1.1" viewBox="0 0 1474 1122" width="1474px" zoomAndPan="magnify"><defs/><g><!--MD5=[023e66897b47d81ead7351f936b76d01]
+cluster tiltfile--><g id="cluster_tiltfile"><rect height="274" rx="2.5" ry="2.5" style="stroke:#444444;stroke-width:1.0;fill:none;" width="758" x="522.8574" y="205"/><text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="61" x="871.3574" y="231.8516">Tiltfile</text><text fill="#444444" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="64" x="869.8574" y="246.7637">[System]</text></g><!--MD5=[81d16cdabbe89c1a39395d00a8354929]
+cluster k8s--><g id="cluster_k8s"><rect height="895" rx="2.5" ry="2.5" style="stroke:#444444;stroke-width:1.0;fill:none;" width="462" x="28.8574" y="221"/><text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="177" x="171.3574" y="247.8516">Kubernetes Cluster</text><text fill="#444444" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="64" x="227.8574" y="262.7637">[System]</text></g><!--MD5=[1bd50cf75bfb2ef5c3e2ccc5b7339071]
+entity liquibasedef--><g id="elem_liquibasedef"><rect fill="#85BBF0" height="117.7813" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="199" x="1057.3574" y="328"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="99" x="1107.3574" y="350.9951">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="146" x="1083.8574" y="369.1484">Image Resource</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="26" x="1143.8574" y="384.0605">[tilt]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="1158.8574" y="399.8857"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="171" x="1071.3574" y="416.1826">Defines when to rebuild</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="1086.8574" y="432.4795">the liquibase image</text></g><!--MD5=[6dae55fded768262c9cd8b7930ee2490]
+entity hasuradef--><g id="elem_hasuradef"><rect fill="#85BBF0" height="117.7813" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="218" x="565.8574" y="328"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="99" x="625.3574" y="350.9951">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="154" x="597.8574" y="369.1484">Hasura Resource</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="26" x="661.8574" y="384.0605">[tilt]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="676.8574" y="399.8857"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="190" x="579.8574" y="416.1826">Defines how to deploy the</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="618.8574" y="432.4795">hasura resource</text></g><!--MD5=[c9b29080672f8e74105888725c17876a]
+entity postgresdef--><g id="elem_postgresdef"><rect fill="#85BBF0" height="136.4063" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="203" x="819.3574" y="319"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="99" x="871.3574" y="341.9951">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="177" x="829.3574" y="360.1484">Hasura PostgreSQL</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="85" x="878.3574" y="378.7734">Resource</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="26" x="907.8574" y="393.6855">[tilt]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="922.8574" y="409.5107"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="161" x="840.3574" y="425.8076">Defines how to deploy</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="878.8574" y="442.1045">PostgreSQL</text></g><!--MD5=[d712329f9f825f02528b4990c26cff6b]
+entity kubeapi--><g id="elem_kubeapi"><rect fill="#85BBF0" height="120.1094" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="139" x="280.3574" y="327"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="99" x="300.3574" y="349.9951">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="105" x="294.3574" y="368.1484">Kubernetes</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="93" x="303.3574" y="386.7734">Controller</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="31" x="334.3574" y="401.6855">[k8s]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="351.8574" y="417.5107"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="294.3574" y="433.8076">Manages cluster</text></g><!--MD5=[8df146a17d83db595faf53df82d5c0b8]
+entity hasuracon--><g id="elem_hasuracon"><rect fill="#85BBF0" height="101.4844" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="179" x="295.3574" y="781.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="99" x="335.3574" y="804.4951">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="159" x="305.3574" y="822.6484">Hasura Container</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="52" x="358.8574" y="837.5605">[Hasura]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="386.8574" y="853.3857"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147" x="313.3574" y="869.6826">The GraphQL Engine</text></g><!--MD5=[b08b8f618af9b8388c6d3267761cb748]
+entity liquibasecon--><g id="elem_liquibasecon"><rect fill="#85BBF0" height="136.4063" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="188" x="121.8574" y="548"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="99" x="166.3574" y="570.9951">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="121" x="152.3574" y="589.1484">Liquibase Init</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="90" x="170.8574" y="607.7734">Container</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="67" x="182.3574" y="622.6855">[Liquibase]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="217.8574" y="638.5107"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="160" x="135.8574" y="654.8076">Applies changesets to</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="182.8574" y="671.1045">database</text></g><!--MD5=[f546d6fa12c372055e5c05fc300ec61d]
+entity postgrescon--><g id="elem_postgrescon"><rect fill="#85BBF0" height="120.1094" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="134" x="126.8574" y="980"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="99" x="144.3574" y="1002.9951">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="108" x="136.8574" y="1021.1484">PostgreSQL</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="90" x="148.8574" y="1039.7734">Container</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="79" x="154.3574" y="1054.6855">[PostgreSQL]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="195.8574" y="1070.5107"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="147.3574" y="1086.8076">The database</text></g><!--MD5=[f50d94d33ab0f5a00a76d31e37a8af23]
+entity tilt--><g id="elem_tilt"><rect fill="#85BBF0" height="101.4844" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="220" x="420.8574" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="99" x="481.3574" y="29.9951">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="28" x="516.8574" y="48.1484">tilt</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="26" x="517.8574" y="63.0605">[tilt]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="532.8574" y="78.8857"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="196" x="434.8574" y="95.1826">Process started by `tilt up`</text></g><!--MD5=[9329c8f631cfd82cef877fb6b608ed44]
+entity liquibaseimagedef--><g id="elem_liquibaseimagedef"><rect fill="#85BBF0" height="117.7813" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="204" x="1102.8574" y="557"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="99" x="1155.3574" y="579.9951">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="184" x="1112.8574" y="598.1484">Liquibase Dockerfile</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="51" x="1179.3574" y="613.0605">[docker]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="1206.8574" y="628.8857"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="176" x="1116.8574" y="645.1826">Defines how to build the</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="1182.8574" y="661.4795">image</text></g><!--MD5=[aaefefc8190754fe8438ffe7d0e63468]
+entity hasuradep--><g id="elem_hasuradep"><rect fill="#85BBF0" height="117.7813" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="218" x="519.8574" y="557"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="99" x="579.3574" y="579.9951">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="179" x="539.3574" y="598.1484">Hasura Deployment</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="31" x="613.3574" y="613.0605">[k8s]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="630.8574" y="628.8857"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="190" x="533.8574" y="645.1826">Defines how to deploy the</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="564.3574" y="661.4795">Hasura Containers</text></g><!--MD5=[b7eaf285dfbbc2d2b819c4818c75dff9]
+entity postgresdep--><g id="elem_postgresdep"><rect fill="#85BBF0" height="136.4063" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="218" x="772.8574" y="548"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="99" x="832.3574" y="570.9951">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="108" x="824.8574" y="589.1484">PostgreSQL</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="110" x="826.8574" y="607.7734">Deployment</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="31" x="866.3574" y="622.6855">[k8s]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="883.8574" y="638.5107"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="190" x="786.8574" y="654.8076">Defines how to deploy the</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159" x="802.3574" y="671.1045">PostgreSQL Container</text></g><!--MD5=[860bf17408c9ea5ff3e2de25e5a146b3]
+entity liquibaseimage--><g id="elem_liquibaseimage"><rect fill="#85BBF0" height="117.7813" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="188" x="1110.8574" y="773"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="99" x="1155.3574" y="795.9951">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="146" x="1131.8574" y="814.1484">Liquibase Image</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="51" x="1179.3574" y="829.0605">[docker]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="1206.8574" y="844.8857"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="160" x="1124.8574" y="861.1826">Contains liquibase and</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="1163.8574" y="877.4795">changesets</text></g><!--MD5=[7c0f197cad09c4d86c8b8989e1030b9e]
+entity docker--><g id="elem_docker"><rect fill="#85BBF0" height="117.7813" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="164" x="1304.8574" y="328"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="99" x="1337.3574" y="350.9951">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="64" x="1354.8574" y="369.1484">Docker</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="51" x="1361.3574" y="384.0605">[docker]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="1388.8574" y="399.8857"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136" x="1318.8574" y="416.1826">Builds images from</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="1345.8574" y="432.4795">Dockerfiles</text></g><!--MD5=[0350adc61acfeabdb3de4979fbb9794e]
+link tilt to tiltfile--><g id="link_tilt_tiltfile"><path d="M530.8574,108.24 C530.8574,130.7865 530.8574,159.0576 530.8574,188.8703 C530.8574,192.5969 530.8574,196.3476 530.8574,200.1142 C530.8574,201.0558 530.8574,201.9985 530.8574,202.942 C530.8574,203.4137 530.8574,203.8857 530.8574,204.3579 " fill="none" id="tilt-to-tiltfile" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="530.8574,204.3579,533.8574,196.3579,527.8574,196.3579,530.8574,204.3579" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="134" x="531.8574" y="157.1387">Looks for changes</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="13" x="594.3574" y="171.1074">in</text></g><!--MD5=[bc94d14fb6e41cedbdb41e76015c413c]
+link hasuracon to postgrescon--><g id="link_hasuracon_postgrescon"><path d="M338.8654,882.604 C313.5134,909.946 281.7294,944.227 254.3834,973.721 " fill="none" id="hasuracon-to-postgrescon" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="248.6194,979.937,256.259,976.1113,251.8597,972.0313,248.6194,979.937" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="34" x="304.3574" y="933.1387">Calls</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="39" x="301.8574" y="947.1074">[JDBC]</text></g><!--MD5=[52fd8725a72757bdb72a590852bb46bb]
+link liquibasecon to postgrescon--><g id="link_liquibasecon_postgrescon"><path d="M172.0614,684.072 C157.1643,710.641 142.3843,742.168 134.8574,773 C122.4184,823.948 124.9693,839.496 134.8574,891 C140.1274,918.449 150.4284,947.288 160.9694,972.142 " fill="none" id="liquibasecon-to-postgrescon" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="164.2424,979.721,163.825,971.1872,158.3167,973.5658,164.2424,979.721" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="141" x="135.8574" y="829.6387">Applies changesets</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="39" x="186.8574" y="843.6074">[JDBC]</text></g><!--MD5=[e189d7054d34d1c921f6c791b7f9c116]
+link liquibasecon to hasuracon--><g id="link_liquibasecon_hasuracon"><path d="M243.7084,684.122 C253.5954,704.087 265.8114,725.33 279.8574,743 C289.0354,754.547 299.9294,765.663 311.1674,775.881 " fill="none" id="liquibasecon-to-hasuracon" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="317.4384,781.461,313.457,773.9013,309.4679,778.3832,317.4384,781.461" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="89" x="280.8574" y="733.1387">Runs before</text></g><!--MD5=[2d6024bd7e1e3f826569f0a8c63f9441]
+link liquibasecon to liquibaseimage--><g id="link_liquibasecon_liquibaseimage"><path d="M309.9954,673.868 C318.8764,677.773 327.9074,681.244 336.8574,684 C475.9144,726.822 518.6324,694.771 662.8574,714 C813.5794,734.095 851.6184,739.147 999.8574,773 C1033.6574,780.719 1070.1874,790.561 1102.9174,799.937 " fill="none" id="liquibasecon-to-liquibaseimage" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1110.7174,802.182,1103.8601,797.0852,1102.1996,802.8508,1110.7174,802.182" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="35" x="856.8574" y="733.1387">Runs</text></g><!--MD5=[03eb53bc9789585654d6aab58ea3fd17]
+link postgresdef to postgresdep--><g id="link_postgresdef_postgresdep"><path d="M909.3144,455.186 C904.7354,481.84 899.4494,512.607 894.7454,539.985 " fill="none" id="postgresdef-to-postgresdep" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="893.3704,547.986,897.6812,540.6092,891.7677,539.5936,893.3704,547.986" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="68" x="901.8574" y="515.1387">Connects</text></g><!--MD5=[70fc2c5cce3873261641a903ea19dc58]
+link postgresdep to postgrescon--><g id="link_postgresdep_postgrescon"><path d="M864.5914,684.222 C856.6844,704.99 845.4804,726.67 829.8574,743 C670.6944,909.356 399.7863,991.432 268.9594,1022.986 " fill="none" id="postgresdep-to-postgrescon" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="260.9284,1024.901,269.4062,1025.9622,268.0136,1020.1261,260.9284,1024.901" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="138" x="793.8574" y="836.6387">Causes creation of</text></g><!--MD5=[bce0a9cbbe150e01b1fccf6dac18c900]
+link hasuradef to hasuradep--><g id="link_hasuradef_hasuradep"><path d="M669.2594,446.259 C666.5663,468.805 662.8224,494.738 657.8574,518 C655.6944,528.137 652.9884,538.75 650.1054,549.083 " fill="none" id="hasuradef-to-hasuradep" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="647.8724,556.917,652.9501,550.0456,647.1799,548.4011,647.8724,556.917" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="68" x="661.8574" y="515.1387">Connects</text></g><!--MD5=[5a0d17443b5272304d59084dd7b0bdf0]
+link hasuradep to hasuracon--><g id="link_hasuradep_hasuracon"><path d="M562.5054,675.194 C526.7534,706.55 482.8873,745.023 447.6904,775.892 " fill="none" id="hasuradep-to-hasuracon" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="441.6724,781.17,449.6647,778.1498,445.7081,773.6392,441.6724,781.17" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="138" x="515.8574" y="733.1387">Causes creation of</text></g><!--MD5=[6c799713ce7fe3b05779ca6602a72be6]
+link hasuradep to liquibasecon--><g id="link_hasuradep_liquibasecon"><path d="M558.0144,556.886 C535.9374,541.87 510.5954,527.793 484.8574,520 C425.3054,501.969 403.9233,500.434 344.8574,520 C328.5404,525.405 312.6104,533.763 297.8254,543.341 " fill="none" id="hasuradep-to-liquibasecon" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="291.1154,547.822,299.4343,545.874,296.1022,540.8843,291.1154,547.822" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="138" x="345.8574" y="515.1387">Causes creation of</text></g><!--MD5=[5cca11f2ae129ae75f4cae73fef24a49]
+link liquibasedef to liquibaseimagedef--><g id="link_liquibasedef_liquibaseimagedef"><path d="M1169.1574,446.163 C1175.7874,477.528 1183.9974,516.357 1190.8774,548.867 " fill="none" id="liquibasedef-to-liquibaseimagedef" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1192.5874,556.988,1193.8685,548.5406,1187.9982,549.7811,1192.5874,556.988" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="68" x="1183.8574" y="515.1387">Connects</text></g><!--MD5=[725d1c2551e7d67a838c83450c97571f]
+link docker to liquibaseimagedef--><g id="link_docker_liquibaseimagedef"><path d="M1340.2274,446.163 C1314.6474,478.059 1282.8874,517.675 1256.5574,550.515 " fill="none" id="docker-to-liquibaseimagedef" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1251.3674,556.988,1258.7118,552.6223,1254.0302,548.8696,1251.3674,556.988" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="44" x="1290.8574" y="515.1387">Reads</text></g><!--MD5=[128e8ffefa9771c1be61baa195d5af3d]
+link docker to liquibaseimage--><g id="link_docker_liquibaseimage"><path d="M1391.0374,446.245 C1393.5674,520.78 1388.2474,651.212 1330.8574,743 C1323.9474,754.054 1315.0874,764.094 1305.2674,773.104 " fill="none" id="docker-to-liquibaseimage" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1299.0374,778.581,1307.0251,775.5485,1303.0616,771.0441,1299.0374,778.581" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="58" x="1388.8574" y="620.6387">Creates</text></g><!--MD5=[621addbaad475cb521662becafeddc2c]
+link liquibaseimagedef to liquibaseimage--><g id="link_liquibaseimagedef_liquibaseimage"><path d="M1204.8574,675.194 C1204.8574,702.793 1204.8574,735.905 1204.8574,764.494 " fill="none" id="liquibaseimagedef-to-liquibaseimage" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1204.8574,772.818,1207.8574,764.818,1201.8574,764.818,1204.8574,772.818" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="103" x="1210.3574" y="726.1387">Contains build</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="116" x="1205.8574" y="740.1074">instructions for</text></g><!--MD5=[2938d75072ce0f732b1e50912e19b9a9]
+link tilt to docker--><g id="link_tilt_docker"><path d="M640.9424,66.5 C821.9724,81.49 1172.4974,118.83 1272.8574,189 C1318.0174,220.57 1347.7974,276.192 1365.5574,320.299 " fill="none" id="tilt-to-docker" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1368.5274,327.832,1368.3898,319.2891,1362.8065,321.486,1368.5274,327.832" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="119" x="1254.8574" y="157.1387">Orchestrates to</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="90" x="1271.3574" y="171.1074">build images</text></g><!--MD5=[9ea1dbc4a14623dc7befb39c4a6ebe32]
+link tilt to kubeapi--><g id="link_tilt_kubeapi"><path d="M426.7444,108.18 C415.7524,116.86 405.7354,126.77 397.8574,138 C360.6733,191.02 350.4154,265.392 348.3934,318.84 " fill="none" id="tilt-to-kubeapi" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="348.1444,326.9,351.39,318.9965,345.3929,318.8112,348.1444,326.9" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="119" x="398.8574" y="150.1387">Orchestrates to</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="88" x="414.3574" y="164.1074">synchronise</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="93" x="413.8574" y="178.0762">deployments</text></g><!--MD5=[320219c731460929cc6e931d59991947]
+link kubeapi to liquibasecon--><g id="link_kubeapi_liquibasecon"><path d="M306.0764,447.103 C293.7674,464.713 280.7724,484.308 269.8574,503 C262.9414,514.843 256.1334,527.705 249.8034,540.352 " fill="none" id="kubeapi-to-liquibasecon" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="246.1354,547.764,252.3726,541.9248,246.9952,539.2634,246.1354,547.764" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="58" x="270.8574" y="515.1387">Creates</text></g><!--MD5=[015ef24c3101516fc8936df9b88598a3]
+link kubeapi to hasuracon--><g id="link_kubeapi_hasuracon"><path d="M346.1834,447.072 C345.2264,465.025 344.3314,484.813 343.8574,503 C341.3873,597.752 363.4104,619.909 374.8574,714 C377.2054,733.301 379.1924,754.461 380.7604,773.414 " fill="none" id="kubeapi-to-hasuracon" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="381.4064,781.39,383.7494,773.1736,377.7691,773.6589,381.4064,781.39" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="58" x="371.8574" y="620.6387">Creates</text></g><!--MD5=[88752aeefcb84615db1efbbc189c2bbe]
+link kubeapi to postgrescon--><g id="link_kubeapi_postgrescon"><path d="M280.2884,414.397 C223.3903,439.759 145.7284,483.767 103.8574,548 C6,698.118 60.2699,787.063 134.8574,950 C138.2714,957.459 142.2684,964.998 146.5444,972.367 " fill="none" id="kubeapi-to-postgrescon" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="150.9023,979.671,149.38,971.2637,144.2273,974.3378,150.9023,979.671" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="58" x="55.8574" y="733.1387">Creates</text></g><!--MD5=[6e0be0e4353765a6c7692499bcf13098]
+link kubeapi to hasuradep--><g id="link_kubeapi_hasuradep"><path d="M419.5414,444.696 C459.4564,477.172 509.6474,518.008 550.8744,551.551 " fill="none" id="kubeapi-to-hasuradep" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="557.1494,556.657,552.8378,549.2806,549.0507,553.9344,557.1494,556.657" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="44" x="507.8574" y="515.1387">Reads</text></g><!--MD5=[e07bb01fbf609a683fadd3c6175ddfe5]
+link kubeapi to postgresdep--><g id="link_kubeapi_postgresdep"><path d="M419.5204,442.103 C447.7284,461.559 481.4834,481.911 514.8574,495 C534.1764,502.576 540.7714,497.787 560.8574,503 C580.4494,508.084 584.3284,512.682 603.8574,518 C669.8764,535.979 690.3693,525.131 754.8574,548 C758.2534,549.204 761.6704,550.486 765.0954,551.833 " fill="none" id="kubeapi-to-postgresdep" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="772.6024,554.88,766.3182,549.0913,764.0614,554.6507,772.6024,554.88" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="44" x="604.8574" y="515.1387">Reads</text></g><!--MD5=[eb60faababa0dd03fb3c5e27e851e4a2]
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+Component(tilt, "tilt", "tilt", "Process started by `tilt up`")
+
+System_Boundary(tiltfile, "Tiltfile") {
+    Component(liquibasedef, "Image Resource", "tilt", "Defines when to rebuild the liquibase image")
+    Component(hasuradef, "Hasura Resource", "tilt", "Defines how to deploy the hasura resource")
+    Component(postgresdef, "Hasura PostgreSQL Resource", "tilt", "Defines how to deploy PostgreSQL")
+}
+
+
+Component(liquibaseimagedef, "Liquibase Dockerfile", "docker", "Defines how to build the image")
+
+Component(hasuradep, "Hasura Deployment", "k8s", "Defines how to deploy the Hasura Containers")
+Component(postgresdep, "PostgreSQL Deployment", "k8s", "Defines how to deploy the PostgreSQL Container")
+
+Component(liquibaseimage, "Liquibase Image", "docker", "Contains liquibase and changesets")
+
+Component(docker, "Docker", "docker", "Builds images from Dockerfiles")
+
+System_Boundary(k8s, "Kubernetes Cluster") {
+    Component(kubeapi, "Kubernetes Controller", "k8s", "Manages cluster")
+    Component(hasuracon, "Hasura Container", "Hasura", "The GraphQL Engine")
+    Component(liquibasecon, "Liquibase Init Container", "Liquibase", "Applies changesets to database")
+    Component(postgrescon, "PostgreSQL Container", "PostgreSQL", "The database")
+}
+
+Rel(tilt, tiltfile, "Looks for changes in")
+
+Rel(hasuracon, postgrescon, "Calls", "JDBC")
+Rel(liquibasecon, postgrescon, "Applies changesets", "JDBC")
+Rel(liquibasecon, hasuracon, "Runs before")
+Rel(liquibasecon, liquibaseimage, "Runs")
+
+Rel(postgresdef, postgresdep, "Connects")
+Rel(postgresdep, postgrescon, "Causes creation of")
+
+Rel(hasuradef, hasuradep, "Connects")
+Rel(hasuradep, hasuracon, "Causes creation of")
+Rel(hasuradep, liquibasecon, "Causes creation of")
+
+Rel(liquibasedef, liquibaseimagedef, "Connects")
+Rel(docker, liquibaseimagedef, "Reads")
+Rel(docker, liquibaseimage, "Creates")
+Rel(liquibaseimagedef, liquibaseimage, "Contains build instructions for")
+
+Rel(tilt, docker, "Orchestrates to build images")
+Rel(tilt, kubeapi, "Orchestrates to synchronise deployments")
+Rel(kubeapi, liquibasecon, "Creates")
+Rel(kubeapi, hasuracon, "Creates")
+Rel(kubeapi, postgrescon, "Creates")
+
+Rel(kubeapi, hasuradep, "Reads")
+Rel(kubeapi, postgresdep, "Reads")
+@enduml
+
+@startuml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam LegendBorderColor transparent
+skinparam LegendBackgroundColor transparent
+skinparam LegendFontColor #FFFFFF
+
+skinparam shadowing<<legendArea>> false
+skinparam rectangle<<legendArea>> {
+    backgroundcolor #00000000
+    bordercolor #00000000
+}
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam queue {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam actor {
+    StereotypeFontSize 12
+    shadowing false
+    style awesome
+}
+
+skinparam person {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam package {
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    FontStyle plain
+    BackgroundColor transparent
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    FontColor #444444
+    BorderColor #444444
+    BackgroundColor transparent
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam database<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam queue<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam actor<<person>> {
+    StereotypeFontColor #08427B
+    FontColor #08427B
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam person<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_person>> {
+    StereotypeFontColor #686868
+    FontColor #686868
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam person<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam queue<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam actor<<system>> {
+    StereotypeFontColor #1168BD
+    FontColor #1168BD
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam person<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_system>> {
+    StereotypeFontColor #999999
+    FontColor #999999
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam person<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+
+
+
+sprite $person [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000025788300000000005886410000000000000
+000000000007DFFFFFFD9643347BFFFFFFFB400000000000
+0000000004EFFFFFFFFFFFFFFFFFFFFFFFFFFB1000000000
+000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD200000000
+00000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE10000000
+0000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000000
+000000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5000000
+000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+0000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3000000
+000000014555555555555555555555555555555300000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+sprite $person2 [48x48/16] {
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000002578888300000000005888864100000000000
+0000000007DFFFFFFFFD9643347BFFFFFFFFFB4000000000
+00000004EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB10000000
+0000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD2000000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+00003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+0000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF50000
+0003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0000
+0009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+0009FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF2000
+0003FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFD0000
+0000BFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFF50000
+00003FFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFB00000
+000006FFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFE100000
+0000007FFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFD2000000
+00000004EFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFB10000000
+0000000007DF8FFFFFFFFFFFFFFFFFFFFFF8FB4000000000
+000000000002578888888888888888888864100000000000
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam database<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam queue<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam actor<<container>> {
+    StereotypeFontColor #438DD5
+    FontColor #438DD5
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam person<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+
+skinparam rectangle<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam database<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam queue<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam actor<<external_container>> {
+    StereotypeFontColor #B3B3B3
+    FontColor #B3B3B3
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam person<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam database<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam queue<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam actor<<component>> {
+    StereotypeFontColor #85BBF0
+    FontColor #85BBF0
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam person<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+
+
+skinparam rectangle<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam database<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam queue<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam actor<<external_component>> {
+    StereotypeFontColor #CCCCCC
+    FontColor #CCCCCC
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam person<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rectangle "==tilt\n//<size:12>[tilt]</size>//\n\n Process started by `tilt up`" <<component>> as tilt 
+
+rectangle "==Tiltfile\n<size:12>[System]</size>" <<boundary>> as tiltfile  {
+    rectangle "==Image Resource\n//<size:12>[tilt]</size>//\n\n Defines when to rebuild the liquibase image" <<component>> as liquibasedef 
+    rectangle "==Hasura Resource\n//<size:12>[tilt]</size>//\n\n Defines how to deploy the hasura resource" <<component>> as hasuradef 
+    rectangle "==Hasura PostgreSQL Resource\n//<size:12>[tilt]</size>//\n\n Defines how to deploy PostgreSQL" <<component>> as postgresdef 
+}
+
+
+rectangle "==Liquibase Dockerfile\n//<size:12>[docker]</size>//\n\n Defines how to build the image" <<component>> as liquibaseimagedef 
+
+rectangle "==Hasura Deployment\n//<size:12>[k8s]</size>//\n\n Defines how to deploy the Hasura Containers" <<component>> as hasuradep 
+rectangle "==PostgreSQL Deployment\n//<size:12>[k8s]</size>//\n\n Defines how to deploy the PostgreSQL Container" <<component>> as postgresdep 
+
+rectangle "==Liquibase Image\n//<size:12>[docker]</size>//\n\n Contains liquibase and changesets" <<component>> as liquibaseimage 
+
+rectangle "==Docker\n//<size:12>[docker]</size>//\n\n Builds images from Dockerfiles" <<component>> as docker 
+
+rectangle "==Kubernetes Cluster\n<size:12>[System]</size>" <<boundary>> as k8s  {
+    rectangle "==Kubernetes Controller\n//<size:12>[k8s]</size>//\n\n Manages cluster" <<component>> as kubeapi 
+    rectangle "==Hasura Container\n//<size:12>[Hasura]</size>//\n\n The GraphQL Engine" <<component>> as hasuracon 
+    rectangle "==Liquibase Init Container\n//<size:12>[Liquibase]</size>//\n\n Applies changesets to database" <<component>> as liquibasecon 
+    rectangle "==PostgreSQL Container\n//<size:12>[PostgreSQL]</size>//\n\n The database" <<component>> as postgrescon 
+}
+
+tilt - ->> tiltfile : **Looks for changes in**
+
+hasuracon - ->> postgrescon : **Calls**\n//<size:12>[JDBC]</size>//
+liquibasecon - ->> postgrescon : **Applies changesets**\n//<size:12>[JDBC]</size>//
+liquibasecon - ->> hasuracon : **Runs before**
+liquibasecon - ->> liquibaseimage : **Runs**
+
+postgresdef - ->> postgresdep : **Connects**
+postgresdep - ->> postgrescon : **Causes creation of**
+
+hasuradef - ->> hasuradep : **Connects**
+hasuradep - ->> hasuracon : **Causes creation of**
+hasuradep - ->> liquibasecon : **Causes creation of**
+
+liquibasedef - ->> liquibaseimagedef : **Connects**
+docker - ->> liquibaseimagedef : **Reads**
+docker - ->> liquibaseimage : **Creates**
+liquibaseimagedef - ->> liquibaseimage : **Contains build instructions for**
+
+tilt - ->> docker : **Orchestrates to build images**
+tilt - ->> kubeapi : **Orchestrates to synchronise deployments**
+kubeapi - ->> liquibasecon : **Creates**
+kubeapi - ->> hasuracon : **Creates**
+kubeapi - ->> postgrescon : **Creates**
+
+kubeapi - ->> hasuradep : **Reads**
+kubeapi - ->> postgresdep : **Reads**
+@enduml
+
+PlantUML version 1.2022.2beta8(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

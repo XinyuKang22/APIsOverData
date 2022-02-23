@@ -327,6 +327,8 @@ Finally, use a mutation to update an actor and verify that the `updated_at` and 
 
 One thing that we often do is introduce a secondary data store that is optimised for performing searches. Although a sensible default approach, for the sake of this exercise we will see how far we can push [postgres's searching capabilities](https://www.postgresql.org/docs/current/textsearch-intro.html).
 
+Before getting started, read [Hasura's documentation about custom functions](https://hasura.io/docs/latest/graphql/core/databases/postgres/schema/custom-functions.html#example-fuzzy-match-search-functions) to get an idea as to how we will be solving the problem.
+
 # Testing your API
 
 # Integration with a front end
