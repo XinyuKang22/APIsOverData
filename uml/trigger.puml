@@ -1,0 +1,24 @@
+@startuml 
+
+participant Hasura as hasura
+participant Postgres as postgres
+participant "BEFORE UPDATE Trigger" as trigger
+participant "Custom Function" as function
+participant "Actor Table" as table
+
+hasura -> postgres : UPDATE data
+postgres -> trigger : Check if trigger should fire
+trigger --> postgres
+alt Yes, trigger must fire
+  loop for each row to be UPDATED
+    postgres -> function : row
+    function --> postgres : modified row
+  end
+end
+
+postgres -> table : UPDATE rows
+table --> postgres : UPDATE result 
+
+postgres --> hasura : UPDATE result
+
+@enduml

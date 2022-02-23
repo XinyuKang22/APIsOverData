@@ -22,9 +22,13 @@ Let's move onto something more complex, tracking when a record was updated.
 
 Check that the `updated_at` field is *not* being updated. This is expected - there is no magic about a column name `updated_at` that would cause postgres (or Hasura) to do anything special.
 
-To keep the `updated_at` and `version` up to date we can use a database [trigger](https://www.postgresql.org/docs/14/trigger-definition.html) to automatically update those values when a row is updated.
+To keep the `updated_at` and `version` up to date we can use a database [trigger](https://www.postgresql.org/docs/14/trigger-definition.html) to automatically call a custom [function](https://www.postgresql.org/docs/14/xfunc-sql.html) that will set those values when a row is updated.
 
-Start by sketching out the [function](https://www.postgresql.org/docs/14/xfunc-sql.html) that will set the value of `updated_at` to `now()` and increment the `version`:
+Conceptually, this will look like:
+
+![](../.generated-diagrams/trigger.svg)
+
+Start by sketching out the  that will set the value of `updated_at` to `now()` and increment the `version`:
 
 ```
 CREATE OR REPLACE FUNCTION on_updated_trigger() RETURNS TRIGGER AS $$
@@ -60,4 +64,4 @@ Finally, use a mutation to update an actor and verify that the `updated_at` and 
 
 One thing that we often do is introduce a secondary data store that is optimised for performing searches. Although a sensible default approach, for the sake of this exercise we will see how far we can push [postgres's searching capabilities](https://www.postgresql.org/docs/current/textsearch-intro.html).
 
-Before getting started, read [Hasura's documentation about custom functions](https://hasura.io/docs/latest/graphql/core/databases/postgres/schema/custom-functions.html#example-fuzzy-match-search-functions) to get an idea as to how we will be solving the 
+Before getting started, read [Hasura's documentation about custom functions](https://hasura.io/docs/latest/graphql/core/databases/postgres/schema/custom-functions.html#example-fuzzy-match-search-functions) to get an idea as to how we will be solving the problem.
