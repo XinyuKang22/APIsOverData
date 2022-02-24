@@ -1,3 +1,12 @@
+# Purpose
+
+This kata covers building a simple web application that is backed by a GraphQL API. Instead of writing the API by hand, you will use Hasura to generate one from a PostgreSQL schema.
+
+There is a heavy focus on exploring which parts of the system can break, what information is available to you and how you would diagnose different sorts of failures.
+
+Your goal is to see if you can outshine this highly polished user experience:
+
+![The goal](images/the_result.png)
 
 # Pre-requisities
 

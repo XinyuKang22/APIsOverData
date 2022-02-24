@@ -23,7 +23,7 @@ The image for the hasura init container is different, it is using an image that 
 1. Find the part of the `Tiltfile` that defines how the Liquibase image is built.
 2. Check the log messages that describe the image being rebuilt and the container restarting when the changeset is added.
 3. What happens if you break the changeset?
-4. What happens if the init container doesn't start cleanly?
+4. What happens if the init container doesn't start correctly?
 
 ## Test the changes
 

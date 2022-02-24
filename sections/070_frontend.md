@@ -51,6 +51,7 @@ And use it in a very simplistic way:
 
 1. What would happen if your `getActorsQuery` does not align with the schema offered by your endpoint? Can you see the details of the error in the client? In the logs of the Hasura container?
 2. By default, the `data` returned `useQuery` has a type of `any`. How have we overridden that? Why do you think it is useful to do that?
+3. Use your browser tools to inspect the network request that is sent when the `App` component is rendered. Does it look any different to the request that Postman sends?
 
 ## Render the data
 
@@ -75,3 +76,4 @@ Test that your subscription is working by updating some actor data and verify th
 2. How would you decide which mechanism to use (hint: see [this guidance from Apollo](https://www.apollographql.com/docs/react/data/subscriptions/#when-to-use-subscriptions))?
 3. Can you see how the subscription is handled by Hasura?
 4. How can you use `psql` to see the queries that are being executed by the database?
+5. Does the network request for a subscription look different to one for a query?
