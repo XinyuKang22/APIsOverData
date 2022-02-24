@@ -7,9 +7,9 @@ The different pieces of the stack are brought together in the `Tiltfile`.
 
 Look in that Tiltfile and find the three major pieces:
 
-1. The Hasura graphql engine.
-2. The postgresql database.
-3. The migrations that create our model inside the database.
+1. The Hasura GraphQL engine.
+2. The PostgreSQL database.
+3. The Liquibase changesets that create our model inside the database.
 
 ![](../.generated-diagrams/runtime.svg)
 
@@ -17,11 +17,11 @@ Keep in mind that many official (and unofficial) images contain both the contain
 
 ## Start tilt
 
-From the directory containing this README, run `tilt up` to start Tilt. Press `space` to get tilt to open the browser console. If everything is working, you can expect to see that three resources have been successfully processed:
+From the directory containing this README (and the Tiltfile), run `tilt up` to start Tilt. Press `space` to get tilt to open the browser console. If everything is working, you can expect to see that three resources have been successfully processed:
 
 1. The Tiltfile itself.
-2. hasura (including the graphql engine and migrations).
-3. hasura-postgres (the postgresql database).
+2. hasura (including the GraphQL engine and changesets).
+3. hasura-postgres (the PostgreSQL database).
 
 ## Check that sane things are happening in kubernetes
 
@@ -63,9 +63,9 @@ Once you've found that endpoint, check that it indicates that Hasura is operatio
 http http://localhost:8080/[???] -v
 ```
 
-### Postgres
+### PostgreSQL
 
-Postgres doesn't offer a simple HTTP endpoint that would allow us to check it is ready to process requests. Instead, we need to execute a query against the database itself.
+PostgreSQL doesn't offer a simple HTTP endpoint that would allow us to check it is ready to process requests. Instead, we need to execute a query against the database itself.
 
 The cli tool for doing this is `psql`. Assuming that you have it installed, craft a minimal query to check that postgresql is working:
 
@@ -94,11 +94,11 @@ Pick the 'type' of liveness probe that you will need to use (http, exec, etc) th
 1. How can you validate that the probe is behaving correctly?
 2. What happens if you mistype the path in the probe, but the probe is still syntactically correct?
 
-### Postgres
+### PostgreSQL
 
 Same as above.
 
-1. What does the health end point of hasura report when hasura-postgres is down?
+1. What does the health end point of hasura report when `hasura-postgres` is down?
 2. Is it a good idea for transitive failures (e.g. Hasura not having access to a working database) to restart the container? To direct traffic away from it?
 
 ## Checkpoint - is everything working
@@ -124,7 +124,7 @@ query MyQuery {
 6. Validate that you can see the data that you just inserted.
 7. Use `psql` to check what data has been inserted into the `film` table.
 
-Now, let's validate that you can call the graphql endpoint from the outside. Use Postman (or your favourite tool) to query an endpoint. You will need to know the URL of the endpoint (hint: you can see this in the "API" explorer of the Hasura console), the HTTP method to use (hint: also visible in the "API" explorer) and how to encapsulate graphql in HTTP.
+Now, let's validate that you can call the graphql endpoint from the outside. Use Postman (or your favourite tool) to query an endpoint. You will need to know the URL of the endpoint (hint: you can see this in the "API" explorer of the Hasura console), the HTTP method to use (hint: also visible in the "API" explorer) and how to encapsulate GraphQL in HTTP.
 
 1. What error message do you get if you use the *wrong* HTTP method?
 2. What happens if you request a field that doesn't have a corresponding column in the database?
@@ -135,7 +135,9 @@ Now, let's validate that you can call the graphql endpoint from the outside. Use
 
 ## More logging
 
-To help us debug any queries, let's turn on some more logging in hasura. A common pattern in applications is to give the user an ability to specify what messages get logged under different circumstances by turning on and off entire categories, adjusting logging level of different categories or changing the global log level.
+To help us debug any queries, let's turn on some more logging in Hasura.
+
+A common pattern in applications is to give the user an ability to specify what messages get logged under different circumstances by turning on and off entire categories, adjusting logging level of different categories or changing the global log level.
 
 Consulting [the hasura logging documentation](https://hasura.io/docs/latest/graphql/core/deployment/logging.html) re-configure the environment vars in `hasura.yaml` to log the queries that are being sent to the database. As always, notice that tilt takes care of restarting the containers after you save your changes.
 
