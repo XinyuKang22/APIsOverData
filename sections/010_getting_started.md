@@ -17,7 +17,7 @@ Keep in mind that many official (and unofficial) images contain both the contain
 
 ## Start tilt
 
-From the directory containing this README (and the Tiltfile), run `tilt up` to start Tilt. Press `space` to get tilt to open the browser console. If everything is working, you can expect to see that three resources have been successfully processed:
+From the directory containing this README (and the `Tiltfile`), run `tilt up` to start Tilt. Press `space` to get tilt to open the browser console. If everything is working, you can expect to see that three resources have been successfully processed:
 
 1. The Tiltfile itself.
 2. hasura (including the GraphQL engine and changesets).
