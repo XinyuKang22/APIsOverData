@@ -23,11 +23,11 @@ And verify that by changing the hard-coded query value, you can retrieve differe
 Then, apply what you learned from reading the documentation to make the query value variable.
 
 1. Clients *could* just use string concatenation to hard-code the query values into the GraphQL query. Why is it useful to define variables in the query?
-2. Looking at the logs, can you see how the query value has been handled as a database parameters. Is it hardcoded into the SQL query?
+2. Looking at the logs, can you see how the query value has been handled as a database parameter. Is it hardcoded into the SQL query string sent to PostgreSQL?
 
 ## Querying between entities
 
-Up until now, we haven't really been using the 'graph' part of GraphQL. We have only been retrieving actors. In this step, we will change that.
+Up until now, we haven't really been using the 'graph' part of GraphQL. We have only been retrieving a single type of entity at a time. In this step, we will change that.
 
 Before we can start retrieving data by leveraging the relationships between our entities, we need to [tell Hasura what those relationships are](https://hasura.io/docs/latest/graphql/core/databases/postgres/schema/using-existing-database.html#step-2-track-foreign-keys).
 
