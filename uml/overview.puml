@@ -1,0 +1,14 @@
+@startuml C4_Elements
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Container(webapp, "Web Application", "React", "")
+
+Container(api, "GraphQL API", "Hasura", "")
+
+Container(db, "Database", "PostgreSQL")
+
+Rel_R(webapp, api, "Reads/Writes", "HTTP/WS")
+
+Rel_R(api, db, "Reads/Writes", "JDBC")
+
+@enduml
