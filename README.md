@@ -18,10 +18,10 @@
 
 [Leveraging Database Features](sections/050_leverage_database.md)
 
-# Testing your API
+[Automated API Testing](sections/060_automated_testing.md)
 
-# Integration with a front end
+[Integration with a Front End](sections/070_frontend.md)
 
-# Authentication and Authorisation
-
-# Asynchronous processes
+# TODO
+1. Authentication and Authorisation
+2. Asynchronous processes

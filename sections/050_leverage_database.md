@@ -1,4 +1,4 @@
-# More database power
+# Leveraging more database features
 
 Postgres is a powerful database and we can use it to solve a lot of problems that we may otherwise implement in our APIs.
 
