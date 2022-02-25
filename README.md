@@ -36,3 +36,6 @@ Your goal is to see if you can outshine this highly polished user experience:
 # TODO
 1. Authentication and Authorisation
 2. Asynchronous processes
+
+# Further Reading
+[RxDB + Hasura](https://hasura.io/learn/graphql/react-rxdb-offline-first/introduction/)
