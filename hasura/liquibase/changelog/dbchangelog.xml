@@ -6,26 +6,26 @@
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd
       http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.5.xsd">
     <changeSet author="dan" id="1">
-        <createTable tableName="actor">
-            <column defaultValue="gen_random_uuid ()" name="id" type="UUID">
+        <createTable tableName="actor" remarks="Contains information about individual actors">
+            <column defaultValue="gen_random_uuid ()" name="id" type="UUID" remarks="Auto-generated id of an actor">
                 <constraints nullable="false" primaryKey="true" />
             </column>
-            <column name="firstname" type="text"/>
-            <column name="lastname" type="text"/>
+            <column name="firstname" type="text" remarks="The optional first name of an actor"/>
+            <column name="lastname" type="text" remarks="The optional last name of an actor"/>
         </createTable>
-        <createTable tableName="film">
-            <column defaultValue="gen_random_uuid ()" name="id" type="UUID">
+        <createTable tableName="film" remarks="Contains information about individual films">
+            <column defaultValue="gen_random_uuid ()" name="id" type="UUID" remarks="Auto-generated id of an film">
                 <constraints nullable="false" primaryKey="true" />
             </column>
-            <column name="name" type="text"/>
-            <column name="release_date" type="timestamptz"/>
+            <column name="name" type="text" remarks="The name of the film"/>
+            <column name="release_date" type="timestamptz" remarks="The date and time of the release. Does not acknowledge that films may be released at different times in different regions"/>
         </createTable>
-        <createTable tableName="role">
-            <column defaultValue="gen_random_uuid ()" name="id" type="UUID">
-                <constraints nullable="false" primaryKey="true" />
+        <createTable tableName="role" remarks="The role that an actor played, relates actors to roles. Does not (currently) relate films to roles.">
+            <column defaultValue="gen_random_uuid ()" name="id" type="UUID" remarks="Auto-generated id of a role">
+                <constraints nullable="false" primaryKey="true"/>
             </column>
-            <column name="name" type="text"/>
-            <column name="actor_id" type="uuid">
+            <column name="name" type="text" remarks="The name of the role"/>
+            <column name="actor_id" type="uuid" remarks="The id of the actor that played this role">
                 <constraints references="actor(id)" nullable="false" foreignKeyName="role_actor_ref"/>
             </column>
         </createTable>

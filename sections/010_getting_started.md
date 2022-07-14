@@ -124,6 +124,9 @@ query MyQuery {
 6. Validate that you can see the data that you just inserted.
 7. Use `psql` to check what data has been inserted into the `film` table.
 
+1. When building the query in the "API" explorer, from where does Hasura get the tooltip information for (e.g) "name"?
+2. How can you see that information using `psql`? Where has Liquibase stored it?
+
 Now, let's validate that you can call the graphql endpoint from the outside. Use Postman (or your favourite tool) to query an endpoint. You will need to know the URL of the endpoint (hint: you can see this in the "API" explorer of the Hasura console), the HTTP method to use (hint: also visible in the "API" explorer) and how to encapsulate GraphQL in HTTP.
 
 1. What error message do you get if you use the *wrong* HTTP method?

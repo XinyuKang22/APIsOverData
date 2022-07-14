@@ -6,7 +6,7 @@ Now that you are able to send queries to Hasura and have a fair chance of diagno
 
 Find the file that holds the database change sets. Read through the [documentation for change sets](https://docs.liquibase.com/concepts/changelogs/xml-format.html) and check that you understand the details of the change set that already exists.
 
-Once you understand the concepts, let's start by adding a new column to an existing table; a 'middle name' for our actors. Create a new change set (make sure it has a new id) and work out how to craft the XML to alter a table and add a new column. For simplicity, make it nullable for now.
+Once you understand the concepts, let's start by adding a new column to an existing table; a 'middle name' for our actors. Create a new change set (make sure it has a new id) and work out how to craft the XML to alter a table and add a new column. For simplicity, make it nullable for now, but make sure you do what is necessary to get a good description and tooltip in Hasura's console.
 
 Once you've added the XML, save your work and watch tilt apply your changes.
 
