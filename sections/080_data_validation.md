@@ -13,7 +13,7 @@ In this section, we'll use both approaches to add some additional validation and
 Create a new changeset that is sourced from an SQL file and add this boilerplate:
 
 ```
-ALTER TABLE ??? ADD CONSTRAINT actor_name_length_more_than_two CHECK (???);
+ALTER TABLE [???] ADD CONSTRAINT actor_name_length_more_than_two CHECK ([???]);
 ```
 
 Then fill in the *two* blank sections so that a new constraint is added that checks that actor's first names are more than 2 characters long (hint check the [functions available on strings](https://www.postgresql.org/docs/current/functions-string.html)).
