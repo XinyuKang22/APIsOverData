@@ -33,6 +33,8 @@ Your goal is to see if you can outshine this highly polished user experience:
 
 [Integration with a Front End](sections/070_frontend.md)
 
+[Data Validation](sections/080_data_validation.md)
+
 # TODO
 1. Authentication and Authorisation
 2. Asynchronous processes
