@@ -2,7 +2,7 @@
 
 We've already added some basic constraints to our schema by specifying types for columns, flagging mandatory columns "NOT NULL" and adding foreign key relationships.
 
-Postgres provides two main tools for performing more sophisticated validation of data:
+To perform more sophisticated validation of data, postgres provides two main tools:
 1. [check constraints](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-CHECK-CONSTRAINTS); and
 2. [before triggers](https://www.postgresql.org/docs/current/sql-createtrigger.html).
 
@@ -16,7 +16,7 @@ Create a new changeset that is sourced from an SQL file and add this boilerplate
 ALTER TABLE ??? ADD CONSTRAINT actor_name_length_more_than_two CHECK (???);
 ```
 
-And fill in the *two* blank sections so that a new constraint is added that checks that actor's first names are more than 2 characters long (hint check the [functions available on strings](https://www.postgresql.org/docs/current/functions-string.html)).
+Then fill in the *two* blank sections so that a new constraint is added that checks that actor's first names are more than 2 characters long (hint check the [functions available on strings](https://www.postgresql.org/docs/current/functions-string.html)).
 
 Once the changeset has been applied, check the table definition in the "Data" section of the Hasura console.
 
@@ -55,7 +55,7 @@ CREATE TRIGGER check_author_name_length_trigger
   EXECUTE PROCEDURE [???];
 ```
 
-And fill in the *four* blank sections.
+Then fill in the *four* blank sections.
 
 Once the changeset has been applied, check the table definition again. 
 
