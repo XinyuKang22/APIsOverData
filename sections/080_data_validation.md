@@ -72,8 +72,6 @@ Use the "API" section to insert an actor with a first name with four characters.
 
 Read the documentation for [Postgres error codes](https://www.postgresql.org/docs/current/errcodes-appendix.html) then change your custom function to raise a exception with the right error code for it to be treated as a user-supplied data issue.
 
-1. Could you replace the check constraint and custom function with a simpler change to the table definition?
-
 ## Cleaning Up
 
 One thing that we forgot to do is add comments to the check constraint, function and trigger.
@@ -83,6 +81,12 @@ Create a new change set and add those comments retrospectively.
 1. Where do you see those comments in the Hasura console?
 2. Where do you see those comments when using `psql`?
 
+## Further Questions
+
+1. Could you replace the check constraint and custom function with a simpler change to the table definition?
+2. Generally, we prefer to 'fail slow' when validating user input so that corrections can be made with as few iterations as possible. Storing our validations in Postgres (whether 'vanilla' schema definitions, constraints of triggered functions) seems to frustrate this. Is there are way that we could 'fail slow' and still using Postgres to validate inputs?
+
 ## More Reading
 [Hasura blog post on the different approaches](https://hasura.io/docs/latest/graphql/core/databases/postgres/schema/data-validations/)
 [Postgres documentation on constraints](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-CHECK-CONSTRAINTS)
+[Parse, don't validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
