@@ -72,6 +72,8 @@ Use the "API" section to insert an actor with a first name with four characters.
 
 Read the documentation for [Postgres error codes](https://www.postgresql.org/docs/current/errcodes-appendix.html) then change your custom function to raise a exception with the right error code for it to be treated as a user-supplied data issue.
 
+1. Could you replace the check constraint and custom function with a simpler change to the table definition?
+
 ## Cleaning Up
 
 One thing that we forgot to do is add comments to the check constraint, function and trigger.
