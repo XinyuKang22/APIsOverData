@@ -68,6 +68,9 @@ Use the "API" section to insert an actor with a first name with four characters.
 1. What is the difference in the error information produced by the constraint and trigger?
 2. Which approach provides more information to the caller?
 3. Where is that additional information coming from?
+4. Does all the information returned in the error response look safe to pass to public users?
+
+Read the documentation for (Postgres error codes)[https://www.postgresql.org/docs/current/errcodes-appendix.html] then change your custom function to raise a exception with the right error code for it to be treated as a user-supplied data issue.
 
 ## Cleaning Up
 
