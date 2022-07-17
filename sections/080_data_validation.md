@@ -70,7 +70,7 @@ Use the "API" section to insert an actor with a first name with four characters.
 3. Where is that additional information coming from?
 4. Does all the information returned in the error response look safe to pass to public users?
 
-Read the documentation for (Postgres error codes)[https://www.postgresql.org/docs/current/errcodes-appendix.html] then change your custom function to raise a exception with the right error code for it to be treated as a user-supplied data issue.
+Read the documentation for [Postgres error codes](https://www.postgresql.org/docs/current/errcodes-appendix.html) then change your custom function to raise a exception with the right error code for it to be treated as a user-supplied data issue.
 
 ## Cleaning Up
 
@@ -82,5 +82,5 @@ Create a new change set and add those comments retrospectively.
 2. Where do you see those comments when using `psql`?
 
 ## More Reading
-(Hasura blog post on the different approaches)[https://hasura.io/docs/latest/graphql/core/databases/postgres/schema/data-validations/]
-(Postgres documentation on constraints)[https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-CHECK-CONSTRAINTS].
+[Hasura blog post on the different approaches](https://hasura.io/docs/latest/graphql/core/databases/postgres/schema/data-validations/)
+[Postgres documentation on constraints](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-CHECK-CONSTRAINTS)
