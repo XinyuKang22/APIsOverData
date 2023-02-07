@@ -27,7 +27,6 @@ spec:
           env:
             - name: POSTGRES_PASSWORD
               value: supersecret
-          # TO BE COMPLETED: Add a liveness probe for postgresql.
 ---
 apiVersion: v1
 kind: Service
