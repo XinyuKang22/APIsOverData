@@ -1,0 +1,1 @@
+ALTER TABLE actor ADD CONSTRAINT actor_name_length_more_than_two CHECK (length(firstname) > 2);

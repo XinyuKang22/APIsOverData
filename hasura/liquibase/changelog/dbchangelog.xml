@@ -30,5 +30,53 @@
             </column>
         </createTable>
     </changeSet>
-    <!-- TO BE COMPLETED: add another changeset here -->
+    <changeSet author="Xinyu" id="2">
+        <addColumn tableName="actor">
+            <column name="middlename" type="text" remarks="The optional middle name of an actor" />
+        </addColumn>
+    </changeSet>
+    <changeSet author="Xinyu" id="3">
+        <addColumn tableName="role">
+            <column name="film_id" type="uuid" remarks="The id of the film that has this role">
+                <constraints references="film(id)" foreignKeyName="role_film_ref" />
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Xinyu" id="4">
+        <addColumn tableName="actor">
+            <column name="created_at" type="timestamp" defaultValue="now ( ) " remarks="Auto-generated timstamp of creation" />
+        </addColumn>
+        <addColumn tableName="role">
+            <column name="created_at" type="timestamp" defaultValue="now ( ) " remarks="Auto-generated timstamp of creation" />
+        </addColumn>
+        <addColumn tableName="film">
+            <column name="created_at" type="timestamp" defaultValue="now ( ) " remarks="Auto-generated timstamp of creation" />
+        </addColumn>
+    </changeSet>
+    <changeSet author="Xinyu" id="5">
+        <addColumn tableName="actor">
+            <column name="updated_at" type="timestamp" defaultValue="now ( ) " remarks="Auto-generated timstamp of update" />
+            <column name="version" type="int" defaultValue="0" remarks="The version of update" />
+        </addColumn>
+        <addColumn tableName="role">
+            <column name="updated_at" type="timestamp" defaultValue="now ( ) " remarks="Auto-generated timstamp of update" />
+            <column name="version" type="int" defaultValue="0" remarks="The version of update" />
+        </addColumn>
+        <addColumn tableName="film">
+            <column name="version" type="int" defaultValue="0" remarks="The version of update" />
+            <column name="updated_at" type="timestamp" defaultValue="now ( ) " remarks="Auto-generated timstamp of update" />
+        </addColumn>
+    </changeSet>
+    <changeSet author="Xinyu" id="6">
+        <sqlFile path="trigger.sql" />
+    </changeSet>
+    <changeSet author="Xinyu" id="7">
+        <sqlFile path="check.sql" />
+    </changeSet>
+    <changeSet author="Xinyu" id="8">
+        <sqlFile path="trigger2.sql" splitStatements="false"/>
+    </changeSet>
+    <changeSet author="Xinyu" id="9">
+        <sqlFile path="comment.sql" />
+    </changeSet>
 </databaseChangeLog>

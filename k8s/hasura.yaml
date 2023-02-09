@@ -24,20 +24,19 @@ spec:
             - name: http
               containerPort: 8080
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /healthz
-              port: 8080
-            initialDelaySeconds: 3
-            periodSeconds: 3
+          # livenessProbe:
+          #   httpGet:
+          #     path: /healthz
+          #     port: 8080
+          #   initialDelaySeconds: 3
+          #   periodSeconds: 3
           env:
             - name: HASURA_GRAPHQL_DATABASE_URL
               value: 'postgres://postgres:supersecret@hasura-postgres-service:5432/postgres'
             - name: HASURA_GRAPHQL_ENABLE_CONSOLE
               value: 'true'
-            # TO BE COMPLETED: turn on query logging
             - name: HASURA_GRAPHQL_ENABLED_LOG_TYPES
-              value: 'query-log'
+              value: startup, http-log, webhook-log, websocket-log, jwk-refresh-log
       initContainers:
         - name: liquibase
           image: hasura-liquibase-migrations

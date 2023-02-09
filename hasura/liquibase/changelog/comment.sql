@@ -1,0 +1,1 @@
+COMMENT ON TRIGGER check_author_name_length_trigger ON actor IS 'Check if the length of first name is greater than 4';
